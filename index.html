@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Good Night</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <section>
+        <img src="images/bg.jpg" id="bg">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountain.png" id="mountain">
+        <img src="images/road.png" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+
+
+    <script>
+        Let: bg = document.getElementById("bg");
+        Let: moon = document.getElementById("moon");
+        Let: mountain = document.getElementById("mountain");
+        Let: road = document.getElementById("road");
+        Let: text = document.getElementById("text");
+
+
+
+        window.addEventListener('scroll', function() {
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+
+        })
+    </script>
+</body>
+
+</html>
